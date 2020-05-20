@@ -5,9 +5,9 @@ from pycallgraph import GlobbingFilter
 from pycallgraph import PyCallGraph
 from pycallgraph.output import GraphvizOutput
 
-from simulation1 import Simulation1
-from simulation2 import Simulation2
-from outils import stats
+from simulations.simulation1 import Simulation1
+from simulations.simulation2 import Simulation2
+from simulations.outils import stats
 
 import os
 os.environ["PATH"] += r";C:\Program Files (x86)\Graphviz2.38\bin"
@@ -28,11 +28,11 @@ def main_b():
 config = Config(include_stdlib=True)
 config.trace_filter = GlobbingFilter(exclude=['pycallgraph.*', 'numpy.*'])
 
-with PyCallGraph(output=GraphvizOutput(output_file='Simulation1_xxx.png'), config=config):
+with PyCallGraph(output=GraphvizOutput(output_file='Simulation1.png'), config=config):
     main_a()
 
-# with PyCallGraph(output=GraphvizOutput(output_file='Simulation2_xxx.png'), config=config):
-#     main_b()
+with PyCallGraph(output=GraphvizOutput(output_file='Simulation2.png'), config=config):
+    main_b()
 
 cProfile.run('main_a()')
-# cProfile.run('main_b()')
+cProfile.run('main_b()')

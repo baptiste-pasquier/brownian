@@ -1,4 +1,4 @@
-from outils import Particle, show_listparticles_point, show_listparticles_vector
+from simulations.outils import Particle, show_listparticles_point, show_listparticles_vector
 from random import random
 import matplotlib.pyplot as plt
 import copy

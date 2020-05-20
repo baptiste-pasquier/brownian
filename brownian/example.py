@@ -1,7 +1,7 @@
-from simulation1 import Simulation1
-from simulation2 import Simulation2
-from simulation3 import Simulation3
-from outils import stats
+from simulations.simulation1 import Simulation1
+from simulations.simulation2 import Simulation2
+from simulations.simulation3 import Simulation3
+from simulations.outils import stats
 
 # Initialisation d'une simulation de type 1
 a = Simulation1(nb_etapes=25, density=0.02, epsilon_time=0.5, time_interval=2, speed=10, speed_BP_init=10)
