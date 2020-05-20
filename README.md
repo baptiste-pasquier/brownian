@@ -80,7 +80,10 @@ Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hor
 
 
 ## Installation
-run `python setup.py install`
+Installation du package `brownian`
+```
+python setup.py install
+```
 
 ## Exemples
 Affichage d'une simulation de type 1 et 2 : `python example.py`
