@@ -86,9 +86,9 @@ python setup.py install
 ```
 
 ## Exemples
-Affichage d'une simulation de type 1 et 2 : `python example.py`
+Affichage d'une simulation de type 1 et 2 : [example.py](examples/example.py)
 
-Affichage d'une vidéo de simulation de type 2 : `python movie.py`
+Affichage d'une vidéo de simulation de type 2 : [example.py](movie.py)
 
 
 ## Utilisation
@@ -97,11 +97,11 @@ Affichage d'une vidéo de simulation de type 2 : `python movie.py`
 
 * Initialisation de la simulation : 
 ```
-from simulation1 import Simulation1
-from outils import stats
+from brownian.simulation1 import Simulation1
+from brownian.outils import stats
 a = Simulation1()
 ```
-Il est possible de personnaliser les paramètres de la simulation, voir le fichier [example.py](example.py).
+Il est possible de personnaliser les paramètres de la simulation, voir le fichier [example.py](examples/example.py).
 
 * Execution d'un calcul :
 ```
