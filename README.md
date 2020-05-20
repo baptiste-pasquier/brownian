@@ -20,13 +20,14 @@ Ce projet fournit différentes simulations d'un mouvement brownien.
 
 Fichier : [simulation1.py](simulation1.py)
 
-t : Génération d’un environnement aléatoire centré autour de la grosse particule (de rayon h*(v+V)). 
+#### Algorithme 
+Date t : Génération d’un environnement aléatoire centré autour de la grosse particule (de rayon h*(v+V)). 
 
 * Cas 1 : si aucune collision pendant la durée h, on fait avancer la grosse particule jusqu’à t+Δh, puis on régénère un nouvel environnement à cette position et au temps t + h
 
 * Cas 2 : si une collision existe entre t et t+h (donc à l’intérieur du disque), on définit Δt la durée avant la première collision. On fait avancer la grosse particule jusqu’à la collision, puis on définit un nouvel environnement à cette position et au temps t + Δt. On change aléatoirement l’angle de la vitesse de la grosse particule.
 
-*Caractéristiques :*
+#### Caractéristiques du modèle
 1. Non prise en compte des collisions des petites particules
 2. Environnement ouvert (sans rebond des petites particules), pas de génération de petite particule lorsqu’une petite particule sort de l’environnement
 3. Plusieurs environnements
@@ -36,11 +37,13 @@ t : Génération d’un environnement aléatoire centré autour de la grosse par
 
 Fichier : [simulation2.py](simulation2.py)
 
+#### Algorithme 
+
 Génération d’un unique et grand environnement aléatoire carré (de côté 2*dim) centré autour de la grosse particule. 
 
 A la première grosse collision possible à la date t + Δt, on fait avancer toutes les petites particules et la grosse particule pendant Δt. On change aléatoirement l’angle de la vitesse de la grosse particule et de la petite particule en collision. Si un petite particule se trouve hors de l’environnement (carré) on la supprime et on redéfinit une petite particule aléatoirement dans l’environnement.
 
-*Caractéristiques :* 
+#### Caractéristiques
 1. Non prise en compte des collisions des petites particules
 2. Environnement ouvert (sans rebond des petites particules), génération d’une petite particule aléatoire à chaque sortie d’une petite particule (pour avoir une densité constante)
 3. Unique environnement
@@ -50,6 +53,7 @@ A la première grosse collision possible à la date t + Δt, on fait avancer tou
 
 Fichier : [simulation3.py](simulation3.py)
 
+#### Algorithme
 Génération d’un unique et grand environnement aléatoire carré (de côté 2*dim) centré autour de la grosse particule. 
 
 On détermine la première petite collision possible (date t + Δt1) et la première grosse collision possible (date t + Δt2).
@@ -59,7 +63,7 @@ On détermine la première petite collision possible (date t + Δt1) et la premi
 
 Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hors de l’environnement (carré): on la supprime et on redéfinit une petite particule aléatoirement dans l’environnement.
 
-*Caractéristiques :*
+#### Caractéristiques
 1. Prise en compte des collisions des petites particules
 2. Environnement ouvert (sans rebond des petites particules), génération d’une petite particule aléatoire à chaque sortie d’une petite particule (pour avoir une densité constante)
 3. Unique environnement
