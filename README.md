@@ -71,7 +71,8 @@ Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hor
 
 
 ## Screenshots
-![Simulation de type 1](./img/simulation1.gif)
+<img src="./img/simulation1.gif" alt="Simulation de type 1" width="500"/>
+
 
 ## Technologie
 * Python - version 3.7
