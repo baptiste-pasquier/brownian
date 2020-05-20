@@ -23,57 +23,6 @@ def distance(x1, y1, x2, y2):
     return sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
 
-# --------------------------------- Affichage -------------------------------- #
-
-def show_listparticles_vector(ax, liste, color, x_origin=0, y_origin=0):
-    """
-    Outil d'affichage des vecteurs d'une liste de particules sous forme de flèche
-
-    Arguments:
-        ax {matplotlib.axes}
-        liste {Particle list} -- liste des particules dont il faut afficher le vecteur vitesse
-        color {string} -- couleur des vecteurs
-
-    Keyword Arguments:
-        x_origin {float} -- coordonnée x de l'origine absolue (default: {0})
-        y_origin {float} -- coordonnée y de l'origine absolue (default: {0})
-    """
-    N = len(liste)
-    X, Y, U, V = np.zeros(N), np.zeros(N), np.zeros(N), np.zeros(N)
-    for i in range(N):
-        x, y = liste[i].x, liste[i].y
-        vx, vy = liste[i].vx, liste[i].vy
-        X[i] = x + x_origin
-        Y[i] = y + y_origin
-        U[i] = vx
-        V[i] = vy
-
-    ax.quiver(X, Y, U, V, color=color, width=0.002)
-
-
-def show_listparticles_point(ax, liste, color, x_origin=0, y_origin=0, marker='.'):
-    """
-    Outil d'affichage d'une liste de particules sous forme de points
-
-    Arguments:
-        ax {matplotlib.axes}
-        liste {Particle list} -- liste des particules à afficher
-        color {string} -- couleur des vecteurs
-
-    Keyword Arguments:
-        x_origin {float} -- coordonnée x de l'origine absolue (default: {0})
-        y_origin {float} -- coordonnée y de l'origine absolue (default: {0})
-        marker {str} -- marqueur pour l'affichage des points (default: {'.'})
-    """
-    N = len(liste)
-    X, Y = np.zeros(N), np.zeros(N)
-    for i in range(N):
-        X[i] = liste[i].x + x_origin
-        Y[i] = liste[i].y + y_origin
-
-    ax.scatter(X, Y, c=color, marker=marker)
-
-
 class Particle:
     def __init__(self, x, y, speed, theta, epsilon_time):
         """
@@ -250,3 +199,57 @@ def stats(simulation, show=False):
         print("Distance moyenne de la grosse particule : ", dist_moy)
         print("Distance maximale de la grosse particule : ", dist_max)
     return freq, dist_moy, dist_max
+
+
+# ---------------------------------------------------------------------------- #
+#                                   Affichage                                  #
+# ---------------------------------------------------------------------------- #
+
+
+def show_listparticles_vector(ax, liste, color, x_origin=0, y_origin=0):
+    """
+    Outil d'affichage des vecteurs d'une liste de particules sous forme de flèche
+
+    Arguments:
+        ax {matplotlib.axes}
+        liste {Particle list} -- liste des particules dont il faut afficher le vecteur vitesse
+        color {string} -- couleur des vecteurs
+
+    Keyword Arguments:
+        x_origin {float} -- coordonnée x de l'origine absolue (default: {0})
+        y_origin {float} -- coordonnée y de l'origine absolue (default: {0})
+    """
+    N = len(liste)
+    X, Y, U, V = np.zeros(N), np.zeros(N), np.zeros(N), np.zeros(N)
+    for i in range(N):
+        x, y = liste[i].x, liste[i].y
+        vx, vy = liste[i].vx, liste[i].vy
+        X[i] = x + x_origin
+        Y[i] = y + y_origin
+        U[i] = vx
+        V[i] = vy
+
+    ax.quiver(X, Y, U, V, color=color, width=0.002)
+
+
+def show_listparticles_point(ax, liste, color, x_origin=0, y_origin=0, marker='.'):
+    """
+    Outil d'affichage d'une liste de particules sous forme de points
+
+    Arguments:
+        ax {matplotlib.axes}
+        liste {Particle list} -- liste des particules à afficher
+        color {string} -- couleur des vecteurs
+
+    Keyword Arguments:
+        x_origin {float} -- coordonnée x de l'origine absolue (default: {0})
+        y_origin {float} -- coordonnée y de l'origine absolue (default: {0})
+        marker {str} -- marqueur pour l'affichage des points (default: {'.'})
+    """
+    N = len(liste)
+    X, Y = np.zeros(N), np.zeros(N)
+    for i in range(N):
+        X[i] = liste[i].x + x_origin
+        Y[i] = liste[i].y + y_origin
+
+    ax.scatter(X, Y, c=color, marker=marker)

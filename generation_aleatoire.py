@@ -5,11 +5,15 @@ import random
 
 N = 5000
 
+# --------------------------------- Méthode 1 -------------------------------- #
+
 X = [uniform(-10, 10) for i in range(N)]
 Y = [uniform(-10, 10) for i in range(N)]
 plt.scatter(X, Y, s=1)
 plt.show()
 
+
+# --------------------------------- Méthode 2 -------------------------------- #
 
 R = [uniform(0, 10) for i in range(N)]
 Theta = [uniform(0, 2 * pi) for i in range(N)]
@@ -18,6 +22,8 @@ Y = [R[i] * sin(Theta[i]) for i in range(N)]
 plt.scatter(X, Y, s=1)
 plt.show()
 
+
+# --------------------------------- Méthode 3 -------------------------------- #
 
 X = []
 Y = []
@@ -31,6 +37,8 @@ plt.scatter(X, Y, s=1)
 plt.show()
 
 
+# --------------------------------- Méthode 4 -------------------------------- #
+
 X = []
 Y = []
 for i in range(N):
@@ -42,6 +50,8 @@ for i in range(N):
 plt.scatter(X, Y, s=1)
 plt.show()
 
+
+# --------------------------------- Méthode 5 -------------------------------- #
 
 X = []
 Y = []
