@@ -71,7 +71,7 @@ Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hor
 
 
 ## Screenshots
-![Simulation de type 1](./img/simulation1.png)
+![Simulation de type 1](./img/simulation1.gif)
 
 ## Technologie
 * Python - version 3.7
@@ -89,7 +89,7 @@ Affichage d'une vidéo de simulation de type 2 : `python movie.py`
 
 ### Exécution d'une simulation de type 1
 
-Initialisation de la simulation : 
+* Initialisation de la simulation : 
 ```
 from simulation1 import Simulation1
 from outils import stats
@@ -97,18 +97,18 @@ a = Simulation1()
 ```
 Il est possible de personnaliser les paramètres de la simulation, voir le fichier [example.py](example.py).
 
-Execution d'un calcul :
+* Execution d'un calcul :
 ```
 a.calcul()
 ```
 Le paramètre `show=True` permet d'afficher les différentes étapes de la simulation.
 
-Affichage des statistiques du dernier calcul effectué: 
+* Affichage des statistiques du dernier calcul effectué: 
 ```
 stats(a, show=True)
 ```
 
-Affichage de la trajectoire du dernier calcul effectué
+* Affichage de la trajectoire du dernier calcul effectué
 ```
 a.traj_image()
 ```
