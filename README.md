@@ -79,11 +79,8 @@ Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hor
 ## Screenshots
 
 
-## Technologie
-* Python - version 3.7
-
 ## Installation
-Describe how to install / setup your local environement / add link to demo version.
+run `python setup.py install`
 
 ## Exemples
 Affichage d'une simulation de type 1 et 2 : `python example.py`
