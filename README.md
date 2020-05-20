@@ -76,21 +76,19 @@ Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hor
 Describe how to install / setup your local environement / add link to demo version.
 
 ## Exemples
-Affichage d'une simulation de type 1 et 2
-`python example.py`
+Affichage d'une simulation de type 1 et 2 : `python example.py`
 
-Affichage d'une vidéo de simulation de type 2
-`python movie.py`
+Affichage d'une vidéo de simulation de type 2 : `python movie.py`
 
 
 
 ## Fonctionnalités
 List of features ready and TODOs for future development
 
-* Calcul en multiprocessing : `python calcul1.py` pour le modèle 1 et `python calcul2.py` pour le modèle 2.
+* Calcul des statistiques en multiprocessing : `python calcul1.py` pour le modèle 1 et `python calcul2.py` pour le modèle 2.
 
-* Différentes méthodes de génération aléatoire de points dans un disque `python generation_aleatoire.py`
+* Affichage de plusieurs méthodes de génération aléatoire de points dans un disque : `python generation_aleatoire.py`
 
-* Profiling des simulations `python profiler.py`
+* Profiling des simulations : `python profiler.py`
 
 
