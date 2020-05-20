@@ -293,4 +293,3 @@ class Simulation3:
         plt.ylim(-coeff_affichage * self.dim, coeff_affichage * self.dim)
         plt.title(self.title)
         plt.show()
-

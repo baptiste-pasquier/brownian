@@ -20,7 +20,7 @@ stats(b, show=True)
 b.traj_image()
 
 
-# Idem avec unesimulation de type 3
+# Idem avec une simulation de type 3
 c = Simulation3(nb_etapes=5, density=0.01, epsilon_time=1, dim=100, speed=10, speed_BP_init=10, limit_collision_zone=10)
 c.calcul(show=True, vector=False, pause=0.1)
 stats(c, show=True)
