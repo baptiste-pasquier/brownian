@@ -86,6 +86,7 @@ Affichage d'une vidéo de simulation de type 2
 ## Fonctionnalités
 List of features ready and TODOs for future development
 
+* Calcul en multiprocessing : `calcul1.py` pour le modèle 1 et `calcul2.py` pour le modèle 2.
 
 * Différentes méthodes de génération aléatoire de points dans un disque `generation_aleatoire.py`
 
