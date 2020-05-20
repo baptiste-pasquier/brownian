@@ -37,4 +37,6 @@ List of features ready and TODOs for future development
 
 * Différentes méthodes de génération aléatoire de points dans un disque `generation_aleatoire.py`
 
+* Profiling des simulations `profiler.py`
+
 
