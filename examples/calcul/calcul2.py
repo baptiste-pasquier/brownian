@@ -3,10 +3,10 @@ import pandas as pd
 import time as tm
 import psutil
 
-from simulations.simulation2 import Simulation2, NoBigCollision, OutsideEnv
-from simulations.outils import stats
+from brownian.simulation2 import Simulation2, NoBigCollision, OutsideEnv
+from brownian.outils import stats
 
-n = 16
+n = 8
 
 b = Simulation2(nb_etapes=50, density=0.5, epsilon_time=0.02, dim=180, speed=10, speed_BP_init=10)
 
