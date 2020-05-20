@@ -86,9 +86,16 @@ python setup.py install
 ```
 
 ## Exemples
-Affichage d'une simulation de type 1 et 2 : [example.py](examples/example.py)
+* Affichage d'une simulation de type 1 et 2 : [example.py](examples/example.py)
 
-Affichage d'une vidéo de simulation de type 2 : [example.py](movie.py)
+* Affichage d'une vidéo de simulation de type 2 : [movie.py](examples/movie.py)
+
+* Calcul des statistiques en multiprocessing : [calcul1.py](examples/calcul/calcul1.py) pour le modèle 1 et [calcul2.py](examples/calcul/calcul2.py) pour le modèle 2.
+
+* Affichage de plusieurs méthodes de génération aléatoire de points dans un disque : [generation_aleatoire.py](examples/generation_aleatoire.py)
+
+* Profiling des simulations : [profiler.py](examples/profiling/profiler.py)
+
 
 
 ## Utilisation
@@ -124,10 +131,5 @@ Il est possible de refaire d'exécuter d'autres calculs avec les mêmes paramèt
 ## Fonctionnalités
 List of features ready and TODOs for future development
 
-* Calcul des statistiques en multiprocessing : `python calcul1.py` pour le modèle 1 et `python calcul2.py` pour le modèle 2.
-
-* Affichage de plusieurs méthodes de génération aléatoire de points dans un disque : `python generation_aleatoire.py`
-
-* Profiling des simulations : `python profiler.py`
 
 
