@@ -1,4 +1,5 @@
 # brownian
+<img src="./img/icon.png" alt="Icon" height="100"/> 
 Modélisation d'un mouvement brownien
 
 ## Table des matières
@@ -99,9 +100,7 @@ python -m pytest
 
 ## Utilisation
 
-### Exécution d'une simulation de type 1
-
-* Initialisation de la simulation : 
+* Initialisation d'une simulation
 ```
 from brownian.simulation1 import Simulation1
 from brownian.outils import stats
@@ -109,13 +108,13 @@ a = Simulation1()
 ```
 Il est possible de personnaliser les paramètres de la simulation, voir le fichier [example.py](examples/example.py).
 
-* Execution d'un calcul :
+* Execution d'un calcul
 ```
 a.calcul()
 ```
 Le paramètre `show=True` permet d'afficher les différentes étapes de la simulation.
 
-* Affichage des statistiques du dernier calcul effectué: 
+* Affichage des statistiques du dernier calcul effectué
 ```
 stats(a, show=True)
 ```
