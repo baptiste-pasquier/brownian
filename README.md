@@ -85,6 +85,11 @@ Installation du package `brownian`
 python setup.py install
 ```
 
+Exécution des tests unitaires
+```
+python -m pytest
+```
+
 ## Exemples
 * Affichage d'une simulation de type 1 et 2 : [example.py](examples/example.py)
 
