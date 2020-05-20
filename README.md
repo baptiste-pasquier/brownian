@@ -57,6 +57,8 @@ A la première grosse collision possible à la date t + Δt, on fait avancer tou
 
 Fichier : [simulation3.py](simulation3.py)
 
+<img src="./img/simulation3.gif" alt="Simulation de type 3" height="300"/>
+
 #### Algorithme
 Génération d’un unique et grand environnement aléatoire carré (de côté 2*dim) centré autour de la grosse particule. 
 
