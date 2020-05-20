@@ -23,9 +23,9 @@ Fichier : [simulation1.py](simulation1.py)
 <img src="./img/simulation1.gif" alt="Simulation de type 1" height="300"/> 
 
 #### Algorithme 
-Date t : Génération d’un environnement aléatoire centré autour de la grosse particule (de rayon h*(v+V)). 
+Date t : Génération d’un environnement aléatoire centré autour de la grosse particule (de rayon ![h(v+V)](https://render.githubusercontent.com/render/math?math=h(v%2BV))). 
 
-* Cas 1 : si aucune collision pendant la durée h, on fait avancer la grosse particule jusqu’à t+Δh, puis on régénère un nouvel environnement à cette position et au temps t + h
+* Cas 1 : si aucune collision pendant la durée h, on fait avancer la grosse particule jusqu’à <img src="https://render.githubusercontent.com/render/math?math=t + \delta h"> t+Δh, puis on régénère un nouvel environnement à cette position et au temps t + h
 
 * Cas 2 : si une collision existe entre t et t+h (donc à l’intérieur du disque), on définit Δt la durée avant la première collision. On fait avancer la grosse particule jusqu’à la collision, puis on définit un nouvel environnement à cette position et au temps t + Δt. On change aléatoirement l’angle de la vitesse de la grosse particule.
 
