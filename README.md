@@ -3,6 +3,7 @@ Modélisation d'un mouvement brownien
 
 ## Table des matières
 * [Informations générales](#informations-générales)
+* [Modèles](#Modèles)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
