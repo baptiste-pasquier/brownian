@@ -21,8 +21,6 @@ Ce projet fournit différentes simulations d'un mouvement brownien.
 
 ### Simulation de type 1
 
-Fichier : [simulation1.py](simulation1.py)
-
 <img src="./img/simulation1.gif" alt="Simulation de type 1" height="300"/> 
 
 #### Algorithme 
@@ -40,8 +38,6 @@ Date t : Génération d’un environnement aléatoire centré autour de la gross
 
 ### Simulation de type 2
 
-Fichier : [simulation2.py](simulation2.py)
-
 <img src="./img/simulation2.gif" alt="Simulation de type 2" height="300"/>
 
 #### Algorithme 
@@ -57,8 +53,6 @@ A la première grosse collision possible à la date t + Δt, on fait avancer tou
 
 
 ### Simulation de type 3
-
-Fichier : [simulation3.py](simulation3.py)
 
 <img src="./img/simulation3.gif" alt="Simulation de type 3" height="300"/>
 
