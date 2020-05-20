@@ -3,10 +3,13 @@ Modélisation d'un mouvement brownien
 
 ## Table des matières
 * [Informations générales](#informations-générales)
-* [Modèles](#Modèles)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
+* [Modèles](#modèles)
+  - [Simulation de type 1](#simulation-de-type-1)
+  - [Simulation de type 2](#simulation-de-type-2)
+  - [Simulation de type 3](#simulation-de-type-3)
+* [Installation](#installation)
+* [Exemples](#exemples)
+* [Utilisation](#utilisation)
 * [Features](#features)
 
 
@@ -74,9 +77,6 @@ Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hor
 2. Environnement ouvert (sans rebond des petites particules), génération d’une petite particule aléatoire à chaque sortie d’une petite particule (pour avoir une densité constante)
 3. Unique environnement
 
-
-
-## Screenshots
 
 
 ## Installation
