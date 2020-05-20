@@ -3,9 +3,13 @@ from simulation2 import Simulation2
 from simulation3 import Simulation3
 from outils import stats
 
+# Initialisatino de la simulation
 a = Simulation1(nb_etapes=25, density=0.02, epsilon_time=0.5, time_interval=2, speed=10, speed_BP_init=10)
+# Calcul de la simulation
 a.calcul(show=True, coeff_affichage=2, pause=0.75)
+# Affichage des statistiques
 stats(a, show=True)
+# Affichage de la trajectoire finale
 a.traj_image(coeff_affichage=2)
 
 b = Simulation2(nb_etapes=25, density=0.01, epsilon_time=0.5, dim=150, speed=10, speed_BP_init=10)
