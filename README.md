@@ -20,6 +20,8 @@ Ce projet fournit différentes simulations d'un mouvement brownien.
 
 Fichier : [simulation1.py](simulation1.py)
 
+<img src="./img/simulation1.gif" alt="Simulation de type 1" height="300"/> 
+
 #### Algorithme 
 Date t : Génération d’un environnement aléatoire centré autour de la grosse particule (de rayon h*(v+V)). 
 
@@ -36,6 +38,8 @@ Date t : Génération d’un environnement aléatoire centré autour de la gross
 ### Simulation de type 2
 
 Fichier : [simulation2.py](simulation2.py)
+
+<img src="./img/simulation2.gif" alt="Simulation de type 2" height="300"/>
 
 #### Algorithme 
 
@@ -71,7 +75,7 @@ Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hor
 
 
 ## Screenshots
-<img src="./img/simulation1.gif" alt="Simulation de type 1" height="300"/> <img src="./img/simulation2.gif" alt="Simulation de type 2" height="300"/>
+
 
 ## Technologie
 * Python - version 3.7
