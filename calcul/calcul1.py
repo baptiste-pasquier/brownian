@@ -4,8 +4,8 @@ import time as tm
 import numpy as np
 import psutil
 
-from ..simulations.simulation1 import Simulation1
-from ..simulations.outils import stats
+from brownian.simulation1 import Simulation1
+from brownian.outils import stats
 
 n = 16
 
