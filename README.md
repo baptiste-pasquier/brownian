@@ -14,7 +14,7 @@ Modélisation d'un mouvement brownien
 Ce projet fournit différentes simulations d'un mouvement brownien.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Simulation de type 1](./img/simulation1.png)
 
 ## Technologie
 * Python - version 3.7
