@@ -28,7 +28,7 @@ Show examples of usage:
 
 ## Fonctionnalités
 List of features ready and TODOs for future development
-* Awesome feature 1
+* Différentes méthodes de génération aléatoire de points dans un disque `generation_aleatoire.py`
 * Awesome feature 2
 * Awesome feature 3
 
