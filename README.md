@@ -92,9 +92,9 @@ python setup.py install
 
 * Calcul des statistiques en multiprocessing : [calcul1.py](examples/calcul/calcul1.py) pour le modèle 1 et [calcul2.py](examples/calcul/calcul2.py) pour le modèle 2.
 
-* Affichage de plusieurs méthodes de génération aléatoire de points dans un disque : [generation_aleatoire.py](examples/generation_aleatoire.py)
-
 * Profiling des simulations : [profiler.py](examples/profiling/profiler.py)
+
+* Affichage de plusieurs méthodes de génération aléatoire de points dans un disque : [generation_aleatoire.py](examples/generation_aleatoire.py)
 
 
 
