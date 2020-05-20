@@ -100,8 +100,6 @@ python -m pytest
 
 ## Utilisation
 
-### Exécution d'une simulation de type 1
-
 * Initialisation de la simulation : 
 ```
 from brownian.simulation1 import Simulation1
