@@ -3,7 +3,8 @@ import pandas as pd
 import time as tm
 import psutil
 
-from main import Simulation2, stats, NoBigCollision, OutsideEnv
+from simulation2 import Simulation2, NoBigCollision, OutsideEnv
+from outils import stats
 
 n = 16
 

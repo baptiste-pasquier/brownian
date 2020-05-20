@@ -4,10 +4,13 @@ from pycallgraph import Config
 from pycallgraph import GlobbingFilter
 from pycallgraph import PyCallGraph
 from pycallgraph.output import GraphvizOutput
+
+from simulation1 import Simulation1
+from simulation2 import Simulation2
+from outils import stats
+
 import os
 os.environ["PATH"] += r";C:\Program Files (x86)\Graphviz2.38\bin"
-
-from main import Simulation1, Simulation2, stats
 
 
 def main_a():

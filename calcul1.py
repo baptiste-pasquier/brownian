@@ -4,7 +4,8 @@ import time as tm
 import numpy as np
 import psutil
 
-from main import Simulation1, stats
+from simulation1 import Simulation1
+from outils import stats
 
 n = 16
 

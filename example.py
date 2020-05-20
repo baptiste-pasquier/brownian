@@ -1,4 +1,7 @@
-from main import Simulation1, Simulation2, Simulation3, stats
+from simulation1 import Simulation1
+from simulation2 import Simulation2
+from simulation3 import Simulation3
+from outils import stats
 
 a = Simulation1(nb_etapes=25, density=0.02, epsilon_time=0.5, time_interval=2, speed=10, speed_BP_init=10)
 a.calcul(show=True, coeff_affichage=2, pause=0.75)
