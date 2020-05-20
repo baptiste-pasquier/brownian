@@ -5,9 +5,9 @@ from pycallgraph import GlobbingFilter
 from pycallgraph import PyCallGraph
 from pycallgraph.output import GraphvizOutput
 
-from simulations.simulation1 import Simulation1
-from simulations.simulation2 import Simulation2
-from simulations.outils import stats
+from ..simulations.simulation1 import Simulation1
+from ..simulations.simulation2 import Simulation2
+from ..simulations.outils import stats
 
 import os
 os.environ["PATH"] += r";C:\Program Files (x86)\Graphviz2.38\bin"

@@ -1,5 +1,5 @@
-from simulations.outils import Particle, show_listparticles_point, show_listparticles_vector
-from simulations.simulation2 import Workzone_square, OutsideEnv
+from .outils import Particle, show_listparticles_point, show_listparticles_vector
+from .simulation2 import Workzone_square, OutsideEnv
 from random import random
 import matplotlib.pyplot as plt
 import copy
