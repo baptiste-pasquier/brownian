@@ -1,4 +1,5 @@
 # brownian
+<img src="./img/icon.png" alt="Icon" height="100"/> 
 Modélisation d'un mouvement brownien
 
 ## Table des matières
