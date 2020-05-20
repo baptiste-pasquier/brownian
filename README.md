@@ -18,7 +18,7 @@ Ce projet fournit différentes simulations d'un mouvement brownien.
 
 ### Simulation de type 1
 
-Fichier : `simulation1.py`
+Fichier : [simulation1.py](simulation1.py)
 
 t : Génération d’un environnement aléatoire centré autour de la grosse particule (de rayon h*(v+V)). 
 
@@ -34,7 +34,7 @@ t : Génération d’un environnement aléatoire centré autour de la grosse par
 
 ### Simulation de type 2
 
-Fichier : `simulation2.py`
+Fichier : [simulation2.py](simulation2.py)
 
 Génération d’un unique et grand environnement aléatoire carré (de côté 2*dim) centré autour de la grosse particule. 
 
@@ -48,7 +48,7 @@ A la première grosse collision possible à la date t + Δt, on fait avancer tou
 
 ### Simulation de type 3
 
-Fichier : `simulation3.py`
+Fichier : [simulation3.py](simulation3.py)
 
 Génération d’un unique et grand environnement aléatoire carré (de côté 2*dim) centré autour de la grosse particule. 
 
@@ -87,10 +87,10 @@ Affichage d'une vidéo de simulation de type 2
 ## Fonctionnalités
 List of features ready and TODOs for future development
 
-* Calcul en multiprocessing : `calcul1.py` pour le modèle 1 et `calcul2.py` pour le modèle 2.
+* Calcul en multiprocessing : `python calcul1.py` pour le modèle 1 et `python calcul2.py` pour le modèle 2.
 
-* Différentes méthodes de génération aléatoire de points dans un disque `generation_aleatoire.py`
+* Différentes méthodes de génération aléatoire de points dans un disque `python generation_aleatoire.py`
 
-* Profiling des simulations `profiler.py`
+* Profiling des simulations `python profiler.py`
 
 
