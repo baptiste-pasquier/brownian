@@ -23,15 +23,18 @@ Ce projet fournit différentes simulations d'un mouvement brownien.
 Describe how to install / setup your local environement / add link to demo version.
 
 ## Exemples
-Show examples of usage:
-`put-your-code-here`
+Affichage d'une simulation de type 1 et 2
+`python example.py`
+
+Affichage d'une vidéo de simulation de type 2
+`python movie.py`
+
+
 
 ## Fonctionnalités
 List of features ready and TODOs for future development
-* Différentes méthodes de génération aléatoire de points dans un disque `generation_aleatoire.py`
-* Awesome feature 2
-* Awesome feature 3
 
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+
+* Différentes méthodes de génération aléatoire de points dans un disque `generation_aleatoire.py`
+
+
