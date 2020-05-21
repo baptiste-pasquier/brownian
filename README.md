@@ -18,7 +18,7 @@ Modélisation d'un mouvement brownien
 
 ## A. Informations générales
 
-Ce projet fournit différentes simulations d'un mouvement brownien.
+Ce projet fournit différentes modélisations d'un mouvement brownien.
 
 ## B. Modélisations
 
