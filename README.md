@@ -99,10 +99,7 @@ Les outils fournissent des mesures sur les trajectoires calculées :
 
 Clone the respository and run `python setup.py install`, or `pip install git+https://github.com/baptiste-pasquier/brownian`.
 
-Exécution des tests unitaires
-```
-python -m pytest
-```
+Exécution des tests unitaires : `python -m pytest`
 
 ## D. Exemples
 * Affichage d'une simulation de type 1 et 2 : [example.py](examples/example.py)
