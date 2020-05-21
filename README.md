@@ -95,10 +95,8 @@ Les outils fournissent des mesures sur les trajectoires calculées :
 * Dsitance maximale de la grosse particule par rapport à sa poisition initiale
 
 ## C. Installation
-Installation du package `brownian`
-```
-python setup.py install
-```
+
+Clone the respository and run `python setup.py install`, or `pip install git+https://github.com/baptiste-pasquier/brownian`.
 
 Exécution des tests unitaires
 ```
