@@ -9,7 +9,7 @@ from brownian.outils import stats
 
 n = 16
 
-c = Simulation3(nb_max_collisions=5, density=10**4, epsilon_time=10**(-3), dim=0.05, speed=10, speed_BP_init=0.1)
+c = Simulation3(nb_max_collisions=5, density=10**4, epsilon_time=10**(-3), dim=0.05, speed=10, speed_BP_init=1)
 
 
 def f(i):
