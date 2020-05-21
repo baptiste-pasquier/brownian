@@ -209,9 +209,9 @@ def stats(simulation, show=False):
 
     if show:
         print("lpm : ", l_p_m)
-        print("Distance moyenne de la grosse particule : ", dist_moy)
-        print("Distance maximale de la grosse particule : ", dist_max)
-        print("Nb de collisions : ", len(X))
+        print("Distance moyenne :", dist_moy)
+        print("Distance maximale :", dist_max)
+        print("Nb de collisions :", len(X), "\n")
     return l_p_m, dist_moy, dist_max, len(X)
 
 
