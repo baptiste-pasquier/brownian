@@ -121,7 +121,7 @@ Clone the respository and run `python setup.py install`, or `pip install git+htt
 Exécution des tests unitaires : `python -m pytest`
 
 ## D. Exemples
-* Affichage d'une simulation de type 1, 2 puis 3 : [example.py](examples/example.py)
+* Affichage d'une simulation de type 1, 1.1, 2 puis 3 : [example.py](examples/example.py)
 
 * Affichage d'une vidéo de simulation de type 2 : [movie.py](examples/movie.py)
 
