@@ -9,9 +9,7 @@ from brownian.outils import stats
 
 n = 16
 
-# a = Simulation1(nb_max_collisions=50, density=0.5, epsilon_time=0.02, time_interval=7, speed=10, speed_BP_init=10)
-
-a = Simulation1(nb_max_collisions=5, density=10**4, epsilon_time=10**(-4), time_interval=10**(-2), speed=10, speed_BP_init=0.1)
+a = Simulation1(nb_max_collisions=15, density=10**4, epsilon_time=10**(-3), time_interval=10**(-2), speed=10, speed_BP_init=0.1)
 
 def f(i):
     a.calcul()
