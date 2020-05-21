@@ -5,9 +5,8 @@ import psutil
 from brownian.simulation1_1 import BrownianMotion1_1
 from brownian.outils1_1 import statsSimulations
 
-n = 1024
-MVT = BrownianMotion1_1(epsilon=10**-4, n_etoile=10**4, v=10, V=0.1,
-                        h=10**-3)
+n = 16
+MVT = BrownianMotion1_1(epsilon=10**-4, n_etoile=10**4, v=10, V=0.1, h=10**-3)
 
 
 def f(i):
