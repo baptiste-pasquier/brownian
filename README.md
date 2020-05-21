@@ -102,11 +102,11 @@ Clone the respository and run `python setup.py install`, or `pip install git+htt
 Exécution des tests unitaires : `python -m pytest`
 
 ## D. Exemples
-* Affichage d'une simulation de type 1 et 2 : [example.py](examples/example.py)
+* Affichage d'une simulation de type 1, 2 puis 3 : [example.py](examples/example.py)
 
 * Affichage d'une vidéo de simulation de type 2 : [movie.py](examples/movie.py)
 
-* Calcul des statistiques en multiprocessing : [calcul1.py](examples/calcul/calcul1.py) pour le modèle 1 et [calcul2.py](examples/calcul/calcul2.py) pour le modèle 2.
+* Calcul des statistiques en multiprocessing : [calcul1.py](examples/calcul/calcul1.py) pour le modèle 1, [calcul2.py](examples/calcul/calcul2.py) pour le modèle 2 et [calcul3.py](examples/calcul/calcul3.py) pour le modèle 3.
 
 * Profiling des simulations : [profiler.py](examples/profiling/profiler.py)
 
