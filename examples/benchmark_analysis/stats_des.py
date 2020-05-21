@@ -25,7 +25,7 @@ for key in ["lpm", "Nb collisions", "Distance moyenne", "Distance max"]:
 	var2.sort()
 	var3.sort()
 
-	result = pd.DataFrame({"Nb col1": var1, "Nb col1.1": var1_1, "Nb col2": var2, "Nb col3": var3})
+	result = pd.DataFrame({key+"1": var1, key+"1.1": var1_1, key+"2": var2, key+"3": var3})
 
 	scatter_matrix(result, figsize=(6, 6), diagonal='kde')
 
