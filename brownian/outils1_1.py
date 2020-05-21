@@ -89,9 +89,9 @@ def statsSimulation(X, Y, verbose=False):
     l_p_m = lpm(X, Y)
     d_moy, d_max = distance(X, Y)
     if verbose:
-        print("lpm :", l_p_m)
-        print("\nDistance moyenne :", d_moy)
-        print("\nDistance maximale :", d_max)
+        print("\nlpm :", l_p_m)
+        print("Distance moyenne :", d_moy)
+        print("Distance maximale :", d_max)
     return l_p_m, d_moy, d_max
 
 
