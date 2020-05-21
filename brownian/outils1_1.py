@@ -81,7 +81,7 @@ def nb_collisions(LX, LY):
     """
     N = []
     for i in range(len(LX)):
-        N.append(len(LX[i]))
+        N.append(len(LX[i])-1)
     return N
 
 
@@ -92,8 +92,8 @@ def statsSimulation(X, Y, verbose=False):
         print("lpm :", l_p_m)
         print("Distance moyenne :", d_moy)
         print("Distance maximale :", d_max)
-        print("Nb de collisions :", len(X), "\n")
-    return l_p_m, d_moy, d_max
+        print("Nb de collisions :", len(X)-1, "\n")
+    return l_p_m, d_moy, d_max, len(X)-1
 
 
 def statsSimulations(LX, LY, boxes=False, verbose=False):
