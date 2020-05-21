@@ -250,6 +250,13 @@ class BrownianMotion1_1():
             self.Vitesse_Y.append(vY)
         return self.CollisionsX, self.CollisionsY
 
+    def trajectoire(self):
+        """
+        Affiche le trajectoire préalablement calculée.
+        """
+        plt.plot(self.CollisionsX, self.CollisionsY)
+        plt.show()
+
 
 if __name__ == '__main__':
     MVT = BrownianMotion1_1(
