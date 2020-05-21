@@ -45,6 +45,9 @@ Date t : Génération d’un environnement aléatoire centré autour de la gross
 ### Simulation de type 1.1
 
 **Amélioration de la simulation de type 1.1.**
+**Utilisation de plusieurs petits environnements définis à chaque collision.**
+
+<img src="./img/simulation1_1.gif" alt="Simulation de type 1" height="300"/> 
 
 Le temps est découpé en intervalles égaux de durée h, appelés étapes. On note nb_étapes le nombre total d’étapes et on numérote ces étapes par des entiers de 0 à nb_étapes.
 
