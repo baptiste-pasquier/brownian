@@ -48,7 +48,7 @@ if __name__ == '__main__':
         except ValueError:
             break
 
-    df = pd.DataFrame(resul, columns=["Fréquence moyenne", "Distance moyenne", "Distance max"])
+    df = pd.DataFrame(resul, columns=["Fréquence", "lpm", "Distance moyenne", "Distance max", "Nb collisions"])
 
     print("\n#####################  Modèle n°3  #####################\n")
     print("NoBigLittleCollision :", No_big_little_collision)

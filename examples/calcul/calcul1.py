@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     mesures = [elem[1] for elem in resul]
 
-    df = pd.DataFrame(mesures, columns=["Fréquence moyenne", "Distance moyenne", "Distance max"])
+    df = pd.DataFrame(mesures, columns=["Fréquence", "lpm", "Distance moyenne", "Distance max", "Nb collisions"])
 
     print("\n#####################  Modèle n°1  #####################\n")
     print("NoBigCollision :", nb_no_collision, "\n")
