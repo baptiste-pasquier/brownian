@@ -19,7 +19,7 @@ setup(name='brownian',
       description="Implémentation de simulations d'un mouvement brownien",
       long_description=""
                        "",
-      author='Baptiste Pasquier',
+      author='Baptiste Pasquier, Alix Plamont & Eric Vong',
       author_email='baptiste.pasquier@ensae.fr',
       url='https://github.com/baptiste-pasquier/brownian',
       packages=packages,
