@@ -46,6 +46,23 @@ Date t : Génération d’un environnement aléatoire centré autour de la gross
 
 **Amélioration de la simulation de type 1.1.**
 
+Le temps est découpé en intervalles égaux de durée h, appelés étapes. On note nb_étapes le nombre total d’étapes et on numérote ces étapes par des entiers de 0 à nb_étapes.
+
+### Algorithme
+Au début de l’étape e on génère une distribution aléatoire de petites particules dans un disque de rayon R=h*(v+V) où v est la vitesse des petites particules et V la vitesse de la grosse (en norme).
+Si une collision se produit dans le disque, on amène la grosse particule au point d’impact, on change aléatoirement la direction de son vecteur vitesse, et on génère un nouvel environnement de petites particules dans un disque autour de la grosse et de rayon R-V*Δt, où Δt est le temps écoulé depuis le début de l’étape.
+On réitère l’opération en détectant chaque fois les collision dans des disques de plus en plus petits (Δt est incrémenté à chaque collisions : notant t1, …, tn les instants des collisions durant l’étape e, on a Δt = t1 + … + tn ; ainsi Δt appartient toujours à [0,h]).
+Lorsqu’il n’y a plus de collision détectée dans le dernier disque, on finit de faire avancer notre particule en ligne droite (pendant donc une durée de h - Δt), et on passe à l’étape e+1.
+
+Cette méthode, bien que d'apparence moins naturelle, offre une réduction des coûts importante.
+Le temps d'execution est dans la plupart des cas divisé par 2 ou 3 par rapport au modèle 1.
+
+### Caractéristiques du modèle : 
+1. Non prise en compte des collisions des petites particules
+2. Environnement ouvert (sans rebond des petites particules), pas de génération de petite particule lorsqu’une petite particule sort de l’environnement
+3. Plusieurs environnements
+
+
 ### Simulation de type 2
 
 **Utilisation d'un grand environnement unique.**
