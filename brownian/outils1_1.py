@@ -85,7 +85,17 @@ def nb_collisions(LX, LY):
     return N
 
 
-def stats(LX, LY, boxes=False, verbose=False):
+def statsSimulation(X, Y, verbose=False):
+    l_p_m = lpm(X, Y)
+    d_moy, d_max = distance(X, Y)
+    if verbose:
+        print("lpm :", l_p_m)
+        print("\nDistance moyenne :", d_moy)
+        print("\nDistance maximale :", d_max)
+    return l_p_m, d_moy, d_max
+
+
+def statsSimulations(LX, LY, boxes=False, verbose=False):
     """
     Renvoie des statistiques descriptives sur les variables lpm, distance
     moyenne et distance maximale.
