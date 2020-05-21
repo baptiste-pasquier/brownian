@@ -236,4 +236,4 @@ class Simulation1:
 #     espilon time : assez faible
 #     time_interval : le plus faible possible, tout en conservant un nombre faible de no_collision
 #                     le but est d'avoir un disque assez grand pour avoir une grosse collision, mais
-#                     assez faible pour minimiser le temps d'execution
+#                     assez faible pour minimiser le temps d'exécution
