@@ -194,6 +194,9 @@ def stats(simulation, show=False):
     Y = [elem[1].y for elem in historic]
     T = [elem[0] for elem in historic]
 
+    # Frequence des collisions
+    freq = (len(X) - 1) / T[-1]
+
     # Distance moyenne par rapport à la position initiale
     X_regul, Y_regul, _ = regular_time(X, Y, T, coeff=5)
     dist_list = [distance(0, 0, X_regul[i], Y_regul[i]) for i in range(len(X_regul))]
@@ -208,11 +211,12 @@ def stats(simulation, show=False):
     l_p_m = lpm(X,Y)
 
     if show:
+        print("Fréquence des collisions : ", freq)
         print("lpm : ", l_p_m)
         print("Distance moyenne :", dist_moy)
         print("Distance maximale :", dist_max)
-        print("Nb de collisions :", len(X), "\n")
-    return l_p_m, dist_moy, dist_max, len(X)
+        print("Nb de collisions :", len(X)-1, "\n")
+    return freq, l_p_m, dist_moy, dist_max, len(X)-1
 
 
 # ---------------------------------------------------------------------------- #

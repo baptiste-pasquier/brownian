@@ -10,7 +10,7 @@ n = 16
 
 # b = Simulation2(nb_max_collisions=50, density=0.5, epsilon_time=0.02, dim=180, speed=10, speed_BP_init=10)
 
-b = Simulation2(nb_max_collisions=15, density=10**4, epsilon_time=10**(-4), dim=0.1, speed=10, speed_BP_init=1)
+b = Simulation2(nb_max_collisions=15, density=10**4, epsilon_time=10**(-4), dim=1, speed=10, speed_BP_init=1)
 
 
 def f(i):
@@ -49,8 +49,8 @@ if __name__ == '__main__':
         except ValueError:
             break
 
-    df = pd.DataFrame(resul, columns=["Fréquence moyenne", "Distance moyenne", "Distance max"])
-
+    df = pd.DataFrame(resul, columns=["Fréquence", "lpm", "Distance moyenne", "Distance max", "Nb collisions"])
+    
     print("\n#####################  Modèle n°2  #####################\n")
     print("NoBigCollision :", No_big_collision)
     print("OutsideEnv :", Outside_env, "\n")
