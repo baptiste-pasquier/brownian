@@ -16,12 +16,13 @@ a.traj_image(coeff_affichage=2)
 
 
 # Idem avec une simulation de type 1.1
-a1 = BrownianMotion1_1(epsilon=10**-4, n_etoile=10**4, v=10, V=1, h=10**-2)
+a1 = BrownianMotion1_1(epsilon=10**-3, n_etoile=10**4, v=10, V=1, h=10**-2)
 # Affichage animé d'une simulation à 100 étapes
 a1.simulationAnimated(100)
-# Calculs d'une simulations à 100 étapes et affichage des statistiques
+# Calcul d'une simulations à 100 étapes et affichage des statistiques
 X, Y = a1.simulation(100)
 statsSimulation(X, Y, verbose=True)
+a1.trajectoire()
 
 
 # Idem avec une simulation de type 2
