@@ -3,24 +3,23 @@ import pandas as pd
 import time as tm
 import psutil
 
-from brownian.simulation2 import Simulation2, NoBigCollision, OutsideEnv
-from brownian.outils import stats
+from brownian.simulation3 import Simulation3, NoBigLittleCollision
+from brownian.simulation2 import OutsideEnv
+from brownian.outils import stats 
 
 n = 16
 
-# b = Simulation2(nb_etapes=50, density=0.5, epsilon_time=0.02, dim=180, speed=10, speed_BP_init=10)
-
-b = Simulation2(nb_etapes=5, density=10**4, epsilon_time=10**(-4), dim=1, speed=10, speed_BP_init=0.1)
+c = Simulation3(nb_etapes=5, density=10**4, epsilon_time=10**(-4), dim=0.05, speed=10, speed_BP_init=0.1, limit_collision_zone=10)
 
 
 def f(i):
     try:
-        b.calcul()
-    except NoBigCollision:
+        c.calcul()
+    except NoBigLittleCollision:
         return 1
     except OutsideEnv:
         return 2
-    return stats(b)
+    return stats(c)
 
 
 if __name__ == '__main__':
@@ -35,7 +34,7 @@ if __name__ == '__main__':
     pool.join()
     resul = pool_outputs
 
-    No_big_collision = resul.count(1)
+    No_big_little_collision = resul.count(1)
     Outside_env = resul.count(2)
 
     while True:
@@ -51,8 +50,8 @@ if __name__ == '__main__':
 
     df = pd.DataFrame(resul, columns=["Fréquence moyenne", "Distance moyenne", "Distance max"])
 
-    print("\n#####################  Modèle n°2  #####################\n")
-    print("NoBigCollision :", No_big_collision)
+    print("\n#####################  Modèle n°3  #####################\n")
+    print("NoBigLittleCollision :", No_big_little_collision)
     print("OutsideEnv :", Outside_env, "\n")
     print(df.describe())
     print("\nTemps d'exécution :", tm.time() - temps1)

@@ -7,10 +7,11 @@ import psutil
 from brownian.simulation1 import Simulation1
 from brownian.outils import stats
 
-n = 512
+n = 16
 
-a = Simulation1(nb_etapes=50, density=0.5, epsilon_time=0.02, time_interval=7, speed=10, speed_BP_init=10)
+# a = Simulation1(nb_etapes=50, density=0.5, epsilon_time=0.02, time_interval=7, speed=10, speed_BP_init=10)
 
+a = Simulation1(nb_etapes=5, density=10**4, epsilon_time=10**(-4), time_interval=10**(-2), speed=10, speed_BP_init=0.1)
 
 def f(i):
     a.calcul()
