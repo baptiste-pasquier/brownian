@@ -7,6 +7,7 @@ from math import pi, sqrt, cos, sin
 # ---------------------------------------------------------------------------- #
 #                             Simulation de type 1                             #
 # ---------------------------------------------------------------------------- #
+infini = float('inf')
 
 
 def random_particle(radius, speed, epsilon_time):
@@ -59,12 +60,13 @@ class Workzone():
 
 
 class Simulation1:
-    def __init__(self, nb_etapes=100, density=10**4, speed_BP_init=1, theta_BP_init=-pi / 4, speed=1, time_interval=0.10, epsilon_time=0.25):
+    def __init__(self, nb_max_collisions=infini, duree=infini, density=10**4, speed_BP_init=1, theta_BP_init=-pi / 4, speed=1, time_interval=0.10, epsilon_time=0.25):
         """
         Définition de l'espace de travail pour une simulation de type 1
 
         Keyword Arguments:
-            nb_etapes {int} -- nombre de collisions dans la simulation (default: {100})
+            nb_max_collisions {int} -- nombre de collisions dans la simulation (default: {infini})
+            duree {float} -- durée théorique de la simulation (default: {infini})
             density {float} -- densité surfacique de petites particules (default: {10**4})
             speed_BP_init {float} -- vitesse de la grosse particule (default: {1})
             theta_BP_init {float} -- angle de la vitesse intiale de la grosse particule (default: {-pi/4})
@@ -72,6 +74,11 @@ class Simulation1:
             time_interval {float} -- intervalle de temps maximal pour une grosse collision (default: {0.10})
             epsilon_time {float} -- précision pour la détection des collisions (default: {0.25})
         """
+        assert nb_max_collisions != infini or duree != infini
+        if nb_max_collisions != infini:
+            assert duree == infini
+        if duree != infini:
+            assert nb_max_collisions == infini
 
         # Rayon et nombre de particules de chaque disque
         self.radius = (speed_BP_init + speed) * time_interval
@@ -81,7 +88,8 @@ class Simulation1:
         self.theta_BP_init = theta_BP_init
         self.speed = speed
         self.time_interval = time_interval
-        self.nb_etapes = nb_etapes
+        self.nb_max_collisions = nb_max_collisions
+        self.duree = duree
         self.epsilon_time = epsilon_time
 
         self.title = "Simulation de type 1"
@@ -115,7 +123,7 @@ class Simulation1:
         historic_BP.append((time, copy.copy(BP)))
 
         # Boucle de calcul des grosses collisions
-        while nb_collision < self.nb_etapes:
+        while nb_collision < self.nb_max_collisions and time < self.duree:
             # Définition d'un nouvel environnement
             zone = Workzone(self.particle_number, self.radius, self.speed, self.epsilon_time)
             # Définition de la grosse particule en coordonnées relatives dans cet environnement
