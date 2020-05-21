@@ -110,11 +110,10 @@ def statsSimulations(LX, LY, boxes=False, verbose=False):
     DMOY, DMAX = distances(LX, LY)
     Nb = nb_collisions(LX, LY)
     df = pd.DataFrame({"lpm": LPM, "Distance moyenne": DMOY,
-                      "Distance maximale": DMAX, "Nombre de collisions": Nb})
-    stats_des = df.describe()
+                      "Distance max": DMAX, "Nb collisions": Nb})
     if verbose:
         print(stats_des)
     if boxes:
         df.boxplot(column=["lpm", "Distance moyenne", "Distance maximale"])
         plt.show()
-    return df, stats_des
+    return df
