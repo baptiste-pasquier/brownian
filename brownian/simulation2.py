@@ -90,12 +90,12 @@ class OutsideEnv(Exception):
 
 
 class Simulation2:
-    def __init__(self, nb_etapes=200, density=10**4, speed_BP_init=1, theta_BP_init=-pi / 4, speed=1, dim=0.2, epsilon_time=0.005):
+    def __init__(self, duree=1, density=10**4, speed_BP_init=1, theta_BP_init=-pi / 4, speed=1, dim=0.2, epsilon_time=0.005):
         """
         Définition de l'espace de travail pour une simulation de type 2
 
         Keyword Arguments:
-            nb_etapes {int} -- nombre de collisions dans la simulation (default: {200})
+            duree {float} -- durée théorique de la simulation (default: {1})
             density {float} -- densité surfacique de petites particules (default: {10**4})
             speed_BP_init {float} -- vitesse de la grosse particule (default: {1})
             theta_BP_init {float} -- angle de la vitesse intiale de la grosse particule (default: {-pi/4})
@@ -110,7 +110,7 @@ class Simulation2:
         self.speed_BP_init = speed_BP_init
         self.theta_BP_init = theta_BP_init
         self.speed = speed
-        self.nb_etapes = nb_etapes
+        self.duree = duree
         self.dim = dim
         self.epsilon_time = epsilon_time
 
@@ -160,7 +160,7 @@ class Simulation2:
             historic_PP.append((time, copy.deepcopy(zone)))
 
         # Boucle de calcul des grosses collisions
-        while nb_collision < self.nb_etapes:
+        while time < self.duree:
             if show and vector:
                 ####
                 ax.clear()
