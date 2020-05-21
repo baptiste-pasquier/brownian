@@ -6,6 +6,7 @@ Modélisation d'un mouvement brownien
 * [Informations générales](#informations-générales)
 * [Modèles](#modèles)
   - [Simulation de type 1](#simulation-de-type-1)
+  - [Simulation de type 1.1](#simulation-de-type-1.1)
   - [Simulation de type 2](#simulation-de-type-2)
   - [Simulation de type 3](#simulation-de-type-3)
 * [Installation](#installation)
@@ -20,7 +21,11 @@ Ce projet fournit différentes simulations d'un mouvement brownien.
 
 ## Modèles
 
+Dans les différents modèles, nous suivons le mouvement d'une grosse particule dans un environnement constitué de nombreuses petites particules aléatoires.
+
 ### Simulation de type 1
+
+Utilisation de plusieurs petits environnements définis à chaque collision.
 
 <img src="./img/simulation1.gif" alt="Simulation de type 1" height="300"/> 
 
@@ -36,14 +41,19 @@ Date t : Génération d’un environnement aléatoire centré autour de la gross
 2. Environnement ouvert (sans rebond des petites particules), pas de génération de petite particule lorsqu’une petite particule sort de l’environnement
 3. Plusieurs environnements
 
+### Simulation de type 1.1
+
+Amélioration de la simulation de type 1.1
 
 ### Simulation de type 2
+
+Utilisation d'un grand environnement unique.
 
 <img src="./img/simulation2.gif" alt="Simulation de type 2" height="300"/>
 
 #### Algorithme 
 
-Génération d’un unique et grand environnement aléatoire carré (de côté 2*dim) centré autour de la grosse particule. 
+On génère un unique et grand environnement aléatoire carré (de côté 2\*dim) centré autour de la grosse particule. 
 
 A la première grosse collision possible à la date t + Δt, on fait avancer toutes les petites particules et la grosse particule pendant Δt. On change aléatoirement l’angle de la vitesse de la grosse particule et de la petite particule en collision. Si un petite particule se trouve hors de l’environnement (carré) on la supprime et on redéfinit une petite particule aléatoirement dans l’environnement.
 
@@ -54,6 +64,8 @@ A la première grosse collision possible à la date t + Δt, on fait avancer tou
 
 
 ### Simulation de type 3
+
+Prise en compte des collisions des petites particules de l'environnement.
 
 <img src="./img/simulation3.gif" alt="Simulation de type 3" height="300"/>
 
