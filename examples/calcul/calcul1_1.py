@@ -2,8 +2,8 @@ import multiprocessing
 import time as tm
 import psutil
 
-from simulation1_1 import BrownianMotion1_1
-from outils1_1 import stats
+from brownian.simulation1_1 import BrownianMotion1_1
+from brownian.outils1_1 import statsSimulations
 
 n = 1024
 MVT = BrownianMotion1_1(epsilon=10**-4, n_etoile=10**4, v=10, V=0.1,
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     LX = [elem[0] for elem in resul]
     LY = [elem[1] for elem in resul]
 
-    df, stats_des = stats(LX, LY)
+    df, stats_des = statsSimulations(LX, LY)
 
     print("\n#####################  Modèle n°1.1  #####################\n")
     print(stats_des)
