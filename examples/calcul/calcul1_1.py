@@ -10,7 +10,7 @@ MVT = BrownianMotion1_1(epsilon=10**-4, n_etoile=10**4, v=10, V=0.1, h=10**-3)
 
 
 def f(i):
-    X, Y = MVT.simulation(1000)
+    X, Y = MVT.simulation(1024)
     return X, Y
 
 
