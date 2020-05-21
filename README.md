@@ -90,9 +90,10 @@ Dans tous les cas, on vérifie à t + Δt  si une petite particule se trouve hor
 
 Les outils fournissent des mesures sur les trajectoires calculées :
 * Fréquence des grosses collisions
-* LPM
+* LPM : libre parcours miyen (distance moyenne parcourue par la grosse particule entre deux collisions)
 * Distance moyenne de la grosse particule par rapport à sa position initiale
-* Dsitance maximale de la grosse particule par rapport à sa poisition initiale
+* Distance maximale de la grosse particule par rapport à sa poisition initiale
+* Nombres de grosses collisions
 
 ## C. Installation
 
