@@ -9,12 +9,12 @@ import time as tm
 import numpy as np
 import psutil
 
-from simulation1 import Simulation1
-from outils import stats
-from simulation1_1 import BrownianMotion1_1
-from outils1_1 import statsSimulations
-from simulation2 import Simulation2, NoBigCollision, OutsideEnv
-from simulation3 import Simulation3, NoBigLittleCollision
+from brownian.simulation1 import Simulation1
+from brownian.outils import stats
+from brownian.simulation1_1 import BrownianMotion1_1
+from brownian.outils1_1 import statsSimulations
+from brownian.simulation2 import Simulation2, NoBigCollision, OutsideEnv
+from brownian.simulation3 import Simulation3, NoBigLittleCollision
 
 N = 32
 DUREE = 1
