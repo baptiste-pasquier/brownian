@@ -29,8 +29,8 @@ if __name__ == '__main__':
     LX = [elem[0] for elem in resul]
     LY = [elem[1] for elem in resul]
 
-    df, stats_des = statsSimulations(LX, LY)
+    df = statsSimulations(LX, LY)
 
     print("\n#####################  Modèle n°1.1  #####################\n")
-    print(stats_des)
+    print(df.describe())
     print("\nTemps d'exécution :", tm.time() - temps1)
