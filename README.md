@@ -25,7 +25,7 @@ Dans les différents modèles, nous suivons le mouvement d'une grosse particule 
 
 ### Simulation de type 1
 
-Utilisation de plusieurs petits environnements définis à chaque collision.
+**Utilisation de plusieurs petits environnements définis à chaque collision.**
 
 <img src="./img/simulation1.gif" alt="Simulation de type 1" height="300"/> 
 
@@ -43,11 +43,11 @@ Date t : Génération d’un environnement aléatoire centré autour de la gross
 
 ### Simulation de type 1.1
 
-Amélioration de la simulation de type 1.1
+**Amélioration de la simulation de type 1.1.**
 
 ### Simulation de type 2
 
-Utilisation d'un grand environnement unique.
+**Utilisation d'un grand environnement unique.**
 
 <img src="./img/simulation2.gif" alt="Simulation de type 2" height="300"/>
 
@@ -65,7 +65,7 @@ A la première grosse collision possible à la date t + Δt, on fait avancer tou
 
 ### Simulation de type 3
 
-Prise en compte des collisions des petites particules de l'environnement.
+**Prise en compte des collisions des petites particules de l'environnement.**
 
 <img src="./img/simulation3.gif" alt="Simulation de type 3" height="300"/>
 
