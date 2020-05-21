@@ -105,11 +105,11 @@ class Simulation2:
             dim {float} -- environnement carré de côté 2*dim (default: {0.2})
             epsilon_time {float} -- précision pour la détection des collisions (default: {0.005})
         """
-        assert nb_max_collisions != infini or duree != infini
+        assert nb_max_collisions != infini or duree != infini, "Choisir un nombre max de grosses collisions ou une durée max"
         if nb_max_collisions != infini:
-            assert duree == infini
+            assert duree == infini, "Impossible de choisir à la foix un nombre max de grosses collisions et une durée max"
         if duree != infini:
-            assert nb_max_collisions == infini
+            assert nb_max_collisions == infini, "Impossible de choisir à la foix un nombre max de grosses collisions et une durée max"
 
         # Nombre de particules dans l'environnement
         self.particle_number = int(density * 4 * dim**2)

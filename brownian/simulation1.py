@@ -74,11 +74,11 @@ class Simulation1:
             time_interval {float} -- intervalle de temps maximal pour une grosse collision (default: {0.10})
             epsilon_time {float} -- précision pour la détection des collisions (default: {0.25})
         """
-        assert nb_max_collisions != infini or duree != infini
+        assert nb_max_collisions != infini or duree != infini, "Choisir un nombre max de grosses collisions ou une durée max"
         if nb_max_collisions != infini:
-            assert duree == infini
+            assert duree == infini, "Impossible de choisir à la foix un nombre max de grosses collisions et une durée max"
         if duree != infini:
-            assert nb_max_collisions == infini
+            assert nb_max_collisions == infini, "Impossible de choisir à la foix un nombre max de grosses collisions et une durée max"
 
         # Rayon et nombre de particules de chaque disque
         self.radius = (speed_BP_init + speed) * time_interval
