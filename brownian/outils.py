@@ -159,6 +159,20 @@ def regular_time(X, Y, T, coeff=2, nb_image=0):
 # regular_time(X,Y,T, coeff=2)
 
 
+def lpm(X, Y):
+    """
+    Renvoie le libre parcours moyen d'une simulation.
+
+    X et Y sont les listes contenant respectivement les abscisses et ordonnées
+    des collisions d'une simulation.
+    """
+    S = 0  # somme des longueurs des segments
+    for i in range(len(X)-1):
+        longueur = sqrt((X[i+1] - X[i])**2 + (Y[i+1] - Y[i])**2)
+        S += longueur
+    return S / (len(X) - 1)
+
+
 def stats(simulation, show=False):
     """
     Calcul des mesures de simulation
@@ -180,9 +194,6 @@ def stats(simulation, show=False):
     Y = [elem[1].y for elem in historic]
     T = [elem[0] for elem in historic]
 
-    # Frequence des collisions
-    freq = (len(X) - 1) / T[-1]
-
     # Distance moyenne par rapport à la position initiale
     X_regul, Y_regul, _ = regular_time(X, Y, T, coeff=5)
     dist_list = [distance(0, 0, X_regul[i], Y_regul[i]) for i in range(len(X_regul))]
@@ -194,11 +205,14 @@ def stats(simulation, show=False):
         if dist >= dist_max:
             dist_max = dist
 
+    l_p_m = lpm(X,Y)
+
     if show:
-        print("Fréquence des collisions : ", freq)
+        print("lpm : ", l_p_m)
         print("Distance moyenne de la grosse particule : ", dist_moy)
         print("Distance maximale de la grosse particule : ", dist_max)
-    return freq, dist_moy, dist_max
+        print("Nb de collisions : ", len(X))
+    return l_p_m, dist_moy, dist_max, len(X)
 
 
 # ---------------------------------------------------------------------------- #
