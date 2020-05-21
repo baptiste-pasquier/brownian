@@ -13,7 +13,6 @@ Modélisation d'un mouvement brownien
 * [C. Installation](#c-installation)
 * [D. Exemples](#d-exemples)
 * [E. Utilisation](#e-utilisation)
-* [F. Fonctionnalités](#f-fonctionnalités)
 
 
 ## A. Informations générales
@@ -128,8 +127,6 @@ Exécution des tests unitaires : `python -m pytest`
 
 * Calcul des statistiques en multiprocessing : [calcul1.py](examples/calcul/calcul1.py) pour le modèle 1, [calcul2.py](examples/calcul/calcul2.py) pour le modèle 2 et [calcul3.py](examples/calcul/calcul3.py) pour le modèle 3.
 
-* Profiling des simulations : [profiler.py](examples/profiling/profiler.py)
-
 * Affichage de plusieurs méthodes de génération aléatoire de points dans un disque : [generation_aleatoire.py](examples/generation_aleatoire.py)
 
 
@@ -169,9 +166,8 @@ Par défaut, ce fichier est enregistré à l'adresse suivante : "~\Documents", s
 
 Le fichier [stats_des.py](examples/benchmark_analysis/stats_des.py) contient un script effectuant une série de statistiques multivariées afin de visualiser les résultats.
 
+* Profiling des simulations : [profiler.py](examples/profiling/profiler.py)
 
-## F. Fonctionnalités
-List of features ready and TODOs for future development
 
 
 
