@@ -3,24 +3,24 @@
 Modélisation d'un mouvement brownien
 
 ## Table des matières
-* [Informations générales](#informations-générales)
-* [Modèlisations](#modélisations)
+* [A. Informations générales](#a-informations-générales)
+* [B. Modélisations](#b-modélisations)
   - [Simulation de type 1](#simulation-de-type-1)
-  - [Simulation de type 1.1](#simulation-de-type-1.1)
+  - [Simulation de type 1.1](#simulation-de-type-11)
   - [Simulation de type 2](#simulation-de-type-2)
   - [Simulation de type 3](#simulation-de-type-3)
   - [Mesures](#mesures)
-* [Installation](#installation)
-* [Exemples](#exemples)
-* [Utilisation](#utilisation)
-* [Features](#features)
+* [C. Installation](#c-installation)
+* [D. Exemples](#d-exemples)
+* [E. Utilisation](#e-utilisation)
+* [F. Fonctionnalités](#f-fonctionnalités)
 
 
-## Informations générales
+## A. Informations générales
 
 Ce projet fournit différentes simulations d'un mouvement brownien.
 
-## Modélisations
+## B. Modélisations
 
 Dans les différents modèles, nous suivons le mouvement d'une grosse particule dans un environnement constitué de nombreuses petites particules aléatoires.
 
@@ -94,7 +94,7 @@ Les outils fournissent des mesures sur les trajectoires calculées :
 * Distance moyenne de la grosse particule par rapport à sa position initiale
 * Dsitance maximale de la grosse particule par rapport à sa poisition initiale
 
-## Installation
+## C. Installation
 Installation du package `brownian`
 ```
 python setup.py install
@@ -105,7 +105,7 @@ Exécution des tests unitaires
 python -m pytest
 ```
 
-## Exemples
+## D. Exemples
 * Affichage d'une simulation de type 1 et 2 : [example.py](examples/example.py)
 
 * Affichage d'une vidéo de simulation de type 2 : [movie.py](examples/movie.py)
@@ -118,7 +118,7 @@ python -m pytest
 
 
 
-## Utilisation
+## E. Utilisation
 
 * Initialisation d'une simulation
 ```
@@ -146,7 +146,7 @@ a.traj_image()
 Il est possible de refaire d'exécuter d'autres calculs avec les mêmes paramètres de simulation avec la commande `a.calcul()`.
 
 
-## Fonctionnalités
+## F. Fonctionnalités
 List of features ready and TODOs for future development
 
 
