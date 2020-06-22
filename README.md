@@ -30,15 +30,15 @@ Dans les différents modèles, nous suivons le mouvement d'une grosse particule 
 <img src="./img/simulation1.gif" alt="Simulation de type 1" height="300"/> 
 
 #### Algorithme 
-Date t : Génération d’un environnement aléatoire centré autour de la grosse particule (de rayon ![h(v+V)](https://render.githubusercontent.com/render/math?math=h(v%2BV))). 
+Date t : Génération d’un environnement aléatoire centré autour de la grosse particule (de rayon h(v+V)). 
 
-* Cas 1 : si aucune collision pendant la durée h, on fait avancer la grosse particule jusqu’à ![t + \Delta h](https://render.githubusercontent.com/render/math?math=t%20%2B%20%5CDelta%20h), puis on régénère un nouvel environnement à cette position et au temps t + h
+* Cas 1 : si aucune collision pendant la durée h, on fait avancer la grosse particule jusqu’à t + h, puis on régénère un nouvel environnement à cette position et au temps t + h
 
 * Cas 2 : si une collision existe entre t et t+h (donc à l’intérieur du disque), on définit Δt la durée avant la première collision. On fait avancer la grosse particule jusqu’à la collision, puis on définit un nouvel environnement à cette position et au temps t + Δt. On change aléatoirement l’angle de la vitesse de la grosse particule.
 
 #### Caractéristiques du modèle
 1. Non prise en compte des collisions des petites particules
-2. Environnement ouvert (sans rebond des petites particules), pas de génération de petite particule lorsqu’une petite particule sort de l’environnement
+2. Environnement ouvert (sans rebond des petites particules), pas de génération de petites particules lorsqu’une petite particule sort de l’environnement
 3. Plusieurs environnements
 
 ### Simulation de type 1.1
@@ -54,14 +54,14 @@ Le temps est découpé en intervalles égaux de durée h, appelés étapes. On n
 Au début de l’étape e on génère une distribution aléatoire de petites particules dans un disque de rayon R=h*(v+V) où v est la vitesse des petites particules et V la vitesse de la grosse (en norme).
 Si une collision se produit dans le disque, on amène la grosse particule au point d’impact, on change aléatoirement la direction de son vecteur vitesse, et on génère un nouvel environnement de petites particules dans un disque autour de la grosse et de rayon R-V*Δt, où Δt est le temps écoulé depuis le début de l’étape.
 On réitère l’opération en détectant chaque fois les collision dans des disques de plus en plus petits (Δt est incrémenté à chaque collisions : notant t1, …, tn les instants des collisions durant l’étape e, on a Δt = t1 + … + tn ; ainsi Δt appartient toujours à [0,h]).
-Lorsqu’il n’y a plus de collision détectée dans le dernier disque, on finit de faire avancer notre particule en ligne droite (pendant donc une durée de h - Δt), et on passe à l’étape e+1.
+Lorsqu’il n’y a plus de collision détectée dans le dernier disque, on finit de faire avancer notre particule en ligne droite (pendant une durée de h - Δt), et on passe à l’étape e+1.
 
 Cette méthode, bien que d'apparence moins naturelle, offre une réduction des coûts importante.
-Le temps d'execution est dans la plupart des cas divisé par 2 ou 3 par rapport au modèle 1.
+Le temps d'exécution est dans la plupart des cas divisé par 2 ou 3 par rapport au modèle 1.
 
 ### Caractéristiques du modèle : 
 1. Non prise en compte des collisions des petites particules
-2. Environnement ouvert (sans rebond des petites particules), pas de génération de petite particule lorsqu’une petite particule sort de l’environnement
+2. Environnement ouvert (sans rebond des petites particules), pas de génération de petites particules lorsqu’une petite particule sort de l’environnement
 3. Plusieurs environnements
 
 
@@ -75,7 +75,7 @@ Le temps d'execution est dans la plupart des cas divisé par 2 ou 3 par rapport 
 
 On génère un unique et grand environnement aléatoire carré (de côté 2\*dim) centré autour de la grosse particule. 
 
-A la première grosse collision possible à la date t + Δt, on fait avancer toutes les petites particules et la grosse particule pendant Δt. On change aléatoirement l’angle de la vitesse de la grosse particule et de la petite particule en collision. Si un petite particule se trouve hors de l’environnement (carré) on la supprime et on redéfinit une petite particule aléatoirement dans l’environnement.
+À la première grosse collision possible à la date t + Δt, on fait avancer toutes les petites particules et la grosse particule pendant Δt. On change aléatoirement l’angle de la vitesse de la grosse particule et de la petite particule en collision. Si une petite particule se trouve hors de l’environnement (carré) on la supprime et on redéfinit une petite particule aléatoirement dans l’environnement.
 
 #### Caractéristiques
 1. Non prise en compte des collisions des petites particules
@@ -141,7 +141,7 @@ a = Simulation1()
 ```
 Il est possible de personnaliser les paramètres de la simulation, voir le fichier [example.py](examples/example.py).
 
-* Execution d'un calcul
+* Exécution d'un calcul
 ```
 a.calcul()
 ```
@@ -156,7 +156,7 @@ stats(a, show=True)
 ```
 a.traj_image()
 ```
-Il est possible de refaire d'exécuter d'autres calculs avec les mêmes paramètres de simulation avec la commande `a.calcul()`.
+Il est possible d'exécuter d'autres calculs avec les mêmes paramètres de simulation avec la commande `a.calcul()`.
 
 * Comparaison des modèles
 
